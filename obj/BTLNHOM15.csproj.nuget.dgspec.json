@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTLNHOM15\\BTLNHOM15\\BTLNHOM15.csproj": {}
+    "E:\\NetCore\\BTLNHOM15\\BTLNHOM15.csproj": {}
   },
   "projects": {
-    "D:\\BTLNHOM15\\BTLNHOM15\\BTLNHOM15.csproj": {
+    "E:\\NetCore\\BTLNHOM15\\BTLNHOM15.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTLNHOM15\\BTLNHOM15\\BTLNHOM15.csproj",
+        "projectUniqueName": "E:\\NetCore\\BTLNHOM15\\BTLNHOM15.csproj",
         "projectName": "BTLNHOM15",
-        "projectPath": "D:\\BTLNHOM15\\BTLNHOM15\\BTLNHOM15.csproj",
+        "projectPath": "E:\\NetCore\\BTLNHOM15\\BTLNHOM15.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\BTLNHOM15\\BTLNHOM15\\obj\\",
+        "outputPath": "E:\\NetCore\\BTLNHOM15\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -49,6 +49,10 @@
               "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
