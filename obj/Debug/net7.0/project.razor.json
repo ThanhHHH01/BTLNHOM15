@@ -18645,6 +18645,21 @@
   "RootNamespace": "BTLNHOM15",
   "Documents": [
     {
+      "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\NhanVien\\Create.cshtml",
+      "TargetPath": "Views\\NhanVien\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\NhanVien\\Details.cshtml",
+      "TargetPath": "Views\\NhanVien\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\NhanVien\\Edit.cshtml",
+      "TargetPath": "Views\\NhanVien\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -18660,8 +18675,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\NhanVien\\Index.cshtml",
+      "TargetPath": "Views\\NhanVien\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\NetCore\\BTLNHOM15\\Views\\NhanVien\\Delete.cshtml",
+      "TargetPath": "Views\\NhanVien\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
