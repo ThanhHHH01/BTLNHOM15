@@ -13,4 +13,14 @@ using BTLNHOM15.Models;
         }
 
         public DbSet<BTLNHOM15.Models.NhanVien> NhanVien { get; set; } = default!;
+
+        public DbSet<BTLNHOM15.Models.HoiVien> HoiVien { get; set; } = default!;
+
+        public DbSet<BTLNHOM15.Models.ChucVu> ChucVu { get; set; } = default!;
+
+        public DbSet<BTLNHOM15.Models.ThietBi> ThietBi { get; set; } = default!;
+
+        public DbSet<BTLNHOM15.Models.GiaGoi> GiaGoi { get; set; } = default!;
+
+        public DbSet<BTLNHOM15.Models.GoiTap> GoiTap { get; set; } = default!;
     }
