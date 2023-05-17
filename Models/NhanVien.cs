@@ -7,10 +7,10 @@ namespace BTLNHOM15.Models
     {
         [Key]
         [Required]
-        [Display( Name = "Mã NV")]
+        [Display( Name = "Mã nhân viên")]
         public string? MaID{get; set;}
         [Required]
-        [Display( Name = "Tên NV")]
+        [Display( Name = "Tên nhân viên")]
         public string? TenNV{get; set;}
 
          [Required]
@@ -19,19 +19,18 @@ namespace BTLNHOM15.Models
 
         [Required]
         [MinLength(10)]
-        [Display( Name = "số điện thoại")]
+        [Display( Name = "Số điện thoại")]
         public string? SĐT{get; set;}
         
         [Required]
-        [StringLength(12)]
-        [Display( Name = "email NV")]
+        [Display( Name = "Email")]
         public string? EmailNV{get; set;}
 
         [Required]
         [Display( Name = "Chức vụ")]
         public string? MaChucVu{get; set;}
-         [ForeignKey("MaChucVu")]
-       public ChucVu? ChucVu{get; set;}
-          
+        [ForeignKey("MaChucVu")]
+        [Display( Name = "Chức vụ")]
+        public ChucVu? ChucVu{get; set;}     
     }
 }

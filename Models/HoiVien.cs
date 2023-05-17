@@ -20,16 +20,20 @@ namespace BTLNHOM15.Models
 
         [Required]
         [MinLength(10)]
-        [Display( Name = "số điện thoại")]
+        [Display( Name = "Số điện thoại")]
         public string? SĐT{get; set;}
 
         [Required]
         [Display( Name = "Email hội viên")]
         public string? EmailHV{get; set;}
 
+        [Required]
         [Display( Name = "Gói tập")]
-        public string? GoiTap{get; set;}
+        public string? MaGoiTap{get; set;}
         [ForeignKey("MaGoiTap")]
+        [Display( Name = "Gói tập")]
+        public GoiTap? GoiTap {get; set;}
+
         [Required]
         [DataType(DataType.Date)]
         [Display( Name = "Ngày bắt đầu")]

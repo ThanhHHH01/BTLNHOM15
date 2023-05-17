@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -21,9 +22,8 @@ namespace BTLNHOM15.Controllers
         // GET: ThietBi
         public async Task<IActionResult> Index()
         {
-              return _context.ThietBi != null ? 
-                          View(await _context.ThietBi.ToListAsync()) :
-                          Problem("Entity set 'MvcGymContext.ThietBi'  is null.");
+            var mvcGymContext = _context.ThietBi.Include(t => t.TinhTrang);
+            return View(await mvcGymContext.ToListAsync());
         }
 
         // GET: ThietBi/Details/5
@@ -35,6 +35,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var thietBi = await _context.ThietBi
+                .Include(t => t.TinhTrang)
                 .FirstOrDefaultAsync(m => m.MaTB == id);
             if (thietBi == null)
             {
@@ -47,6 +48,7 @@ namespace BTLNHOM15.Controllers
         // GET: ThietBi/Create
         public IActionResult Create()
         {
+            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang");
             return View();
         }
 
@@ -55,7 +57,7 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaTB,TenTB,size,Soluong,Giatien")] ThietBi thietBi)
+        public async Task<IActionResult> Create([Bind("MaTB,TenTB,size,Soluong,MaTinhTrang")] ThietBi thietBi)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +65,7 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 
@@ -79,6 +82,7 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
+            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 
@@ -87,7 +91,7 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaTB,TenTB,size,Soluong,Giatien")] ThietBi thietBi)
+        public async Task<IActionResult> Edit(string id, [Bind("MaTB,TenTB,size,Soluong,MaTinhTrang")] ThietBi thietBi)
         {
             if (id != thietBi.MaTB)
             {
@@ -114,6 +118,7 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 
@@ -126,6 +131,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var thietBi = await _context.ThietBi
+                .Include(t => t.TinhTrang)
                 .FirstOrDefaultAsync(m => m.MaTB == id);
             if (thietBi == null)
             {

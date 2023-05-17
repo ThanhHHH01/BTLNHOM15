@@ -1,4 +1,4 @@
-@model BTLNHOM15.Models.GoiTap
+@model BTLNHOM15.Models.TinhTrang
 
 @{
     ViewData["Title"] = "Edit";
@@ -6,22 +6,22 @@
 
 <h1>Edit</h1>
 
-<h4>GoiTap</h4>
+<h4>TinhTrang</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="MaGoiTap" />
+            <input type="hidden" asp-for="MaTinhTrang" />
             <div class="form-group">
-                <label asp-for="TenGoi" class="control-label"></label>
-                <input asp-for="TenGoi" class="form-control" />
-                <span asp-validation-for="TenGoi" class="text-danger"></span>
+                <label asp-for="MaTB" class="control-label"></label>
+                <select asp-for="MaTB" class="form-control" asp-items="ViewBag.MaTB"></select>
+                <span asp-validation-for="MaTB" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GiaGoi" class="control-label"></label>
-                <input asp-for="GiaGoi" class="form-control" />
-                <span asp-validation-for="GiaGoi" class="text-danger"></span>
+                <label asp-for="TinhTrangND" class="control-label"></label>
+                <input asp-for="TinhTrangND" class="form-control" />
+                <span asp-validation-for="TinhTrangND" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

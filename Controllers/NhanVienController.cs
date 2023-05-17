@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTLNHOM15.Models;
+using BTLNHOM15.Data;
 
 namespace BTLNHOM15.Controllers
 {

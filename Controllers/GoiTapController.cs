@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -21,8 +22,9 @@ namespace BTLNHOM15.Controllers
         // GET: GoiTap
         public async Task<IActionResult> Index()
         {
-            var mvcGymContext = _context.GoiTap.Include(g => g.GiaGoi);
-            return View(await mvcGymContext.ToListAsync());
+              return _context.GoiTap != null ? 
+                          View(await _context.GoiTap.ToListAsync()) :
+                          Problem("Entity set 'MvcGymContext.GoiTap'  is null.");
         }
 
         // GET: GoiTap/Details/5
@@ -34,8 +36,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var goiTap = await _context.GoiTap
-                .Include(g => g.GiaGoi)
-                .FirstOrDefaultAsync(m => m.GoiID == id);
+                .FirstOrDefaultAsync(m => m.MaGoiTap == id);
             if (goiTap == null)
             {
                 return NotFound();
@@ -47,7 +48,6 @@ namespace BTLNHOM15.Controllers
         // GET: GoiTap/Create
         public IActionResult Create()
         {
-            ViewData["MaGoiTap"] = new SelectList(_context.GiaGoi, "MaGiaGoi", "MaGiaGoi");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("GoiID,MaGoiTap")] GoiTap goiTap)
+        public async Task<IActionResult> Create([Bind("MaGoiTap,TenGoi,GiaGoi")] GoiTap goiTap)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,6 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GiaGoi, "MaGiaGoi", "MaGiaGoi", goiTap.MaGoiTap);
             return View(goiTap);
         }
 
@@ -81,7 +80,6 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GiaGoi, "MaGiaGoi", "MaGiaGoi", goiTap.MaGoiTap);
             return View(goiTap);
         }
 
@@ -90,9 +88,9 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("GoiID,MaGoiTap")] GoiTap goiTap)
+        public async Task<IActionResult> Edit(string id, [Bind("MaGoiTap,TenGoi,GiaGoi")] GoiTap goiTap)
         {
-            if (id != goiTap.GoiID)
+            if (id != goiTap.MaGoiTap)
             {
                 return NotFound();
             }
@@ -106,7 +104,7 @@ namespace BTLNHOM15.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!GoiTapExists(goiTap.GoiID))
+                    if (!GoiTapExists(goiTap.MaGoiTap))
                     {
                         return NotFound();
                     }
@@ -117,7 +115,6 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GiaGoi, "MaGiaGoi", "MaGiaGoi", goiTap.MaGoiTap);
             return View(goiTap);
         }
 
@@ -130,8 +127,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var goiTap = await _context.GoiTap
-                .Include(g => g.GiaGoi)
-                .FirstOrDefaultAsync(m => m.GoiID == id);
+                .FirstOrDefaultAsync(m => m.MaGoiTap == id);
             if (goiTap == null)
             {
                 return NotFound();
@@ -161,7 +157,7 @@ namespace BTLNHOM15.Controllers
 
         private bool GoiTapExists(string id)
         {
-          return (_context.GoiTap?.Any(e => e.GoiID == id)).GetValueOrDefault();
+          return (_context.GoiTap?.Any(e => e.MaGoiTap == id)).GetValueOrDefault();
         }
     }
 }

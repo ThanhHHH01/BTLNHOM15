@@ -5,91 +5,95 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
 {
-    public class GiaGoiController : Controller
+    public class TinhTrangController : Controller
     {
         private readonly MvcGymContext _context;
 
-        public GiaGoiController(MvcGymContext context)
+        public TinhTrangController(MvcGymContext context)
         {
             _context = context;
         }
 
-        // GET: GiaGoi
+        // GET: TinhTrang
         public async Task<IActionResult> Index()
         {
-              return _context.GiaGoi != null ? 
-                          View(await _context.GiaGoi.ToListAsync()) :
-                          Problem("Entity set 'MvcGymContext.GiaGoi'  is null.");
+            var mvcGymContext = _context.TinhTrang.Include(t => t.ThietBi);
+            return View(await mvcGymContext.ToListAsync());
         }
 
-        // GET: GiaGoi/Details/5
+        // GET: TinhTrang/Details/5
         public async Task<IActionResult> Details(string id)
         {
-            if (id == null || _context.GiaGoi == null)
+            if (id == null || _context.TinhTrang == null)
             {
                 return NotFound();
             }
 
-            var giaGoi = await _context.GiaGoi
-                .FirstOrDefaultAsync(m => m.MaGiaGoi == id);
-            if (giaGoi == null)
+            var tinhTrang = await _context.TinhTrang
+                .Include(t => t.ThietBi)
+                .FirstOrDefaultAsync(m => m.MaTinhTrang == id);
+            if (tinhTrang == null)
             {
                 return NotFound();
             }
 
-            return View(giaGoi);
+            return View(tinhTrang);
         }
 
-        // GET: GiaGoi/Create
+        // GET: TinhTrang/Create
         public IActionResult Create()
         {
+            ViewData["MaTB"] = new SelectList(_context.ThietBi, "MaTB", "MaTB");
             return View();
         }
 
-        // POST: GiaGoi/Create
+        // POST: TinhTrang/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaGiaGoi,TenGoi")] GiaGoi giaGoi)
+        public async Task<IActionResult> Create([Bind("MaTinhTrang,MaTB,TinhTrangND")] TinhTrang tinhTrang)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(giaGoi);
+                _context.Add(tinhTrang);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(giaGoi);
+            ViewData["MaTB"] = new SelectList(_context.ThietBi, "MaTB", "MaTB", tinhTrang.MaTB);
+            return View(tinhTrang);
         }
 
-        // GET: GiaGoi/Edit/5
+        // GET: TinhTrang/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
-            if (id == null || _context.GiaGoi == null)
+            if (id == null || _context.TinhTrang == null)
             {
                 return NotFound();
             }
 
-            var giaGoi = await _context.GiaGoi.FindAsync(id);
-            if (giaGoi == null)
+            var tinhTrang = await _context.TinhTrang.FindAsync(id);
+            if (tinhTrang == null)
             {
                 return NotFound();
             }
-            return View(giaGoi);
+            ViewData["MaTB"] = new SelectList(_context.ThietBi, "MaTB", "MaTB", tinhTrang.MaTB);
+            return View(tinhTrang);
         }
 
-        // POST: GiaGoi/Edit/5
+        // POST: TinhTrang/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaGiaGoi,TenGoi")] GiaGoi giaGoi)
+        public async Task<IActionResult> Edit(string id, [Bind("MaTinhTrang,MaTB,TinhTrangND")] TinhTrang tinhTrang)
         {
-            if (id != giaGoi.MaGiaGoi)
+            if (id != tinhTrang.MaTinhTrang)
             {
                 return NotFound();
             }
@@ -98,12 +102,12 @@ namespace BTLNHOM15.Controllers
             {
                 try
                 {
-                    _context.Update(giaGoi);
+                    _context.Update(tinhTrang);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!GiaGoiExists(giaGoi.MaGiaGoi))
+                    if (!TinhTrangExists(tinhTrang.MaTinhTrang))
                     {
                         return NotFound();
                     }
@@ -114,49 +118,51 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(giaGoi);
+            ViewData["MaTB"] = new SelectList(_context.ThietBi, "MaTB", "MaTB", tinhTrang.MaTB);
+            return View(tinhTrang);
         }
 
-        // GET: GiaGoi/Delete/5
+        // GET: TinhTrang/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
-            if (id == null || _context.GiaGoi == null)
+            if (id == null || _context.TinhTrang == null)
             {
                 return NotFound();
             }
 
-            var giaGoi = await _context.GiaGoi
-                .FirstOrDefaultAsync(m => m.MaGiaGoi == id);
-            if (giaGoi == null)
+            var tinhTrang = await _context.TinhTrang
+                .Include(t => t.ThietBi)
+                .FirstOrDefaultAsync(m => m.MaTinhTrang == id);
+            if (tinhTrang == null)
             {
                 return NotFound();
             }
 
-            return View(giaGoi);
+            return View(tinhTrang);
         }
 
-        // POST: GiaGoi/Delete/5
+        // POST: TinhTrang/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            if (_context.GiaGoi == null)
+            if (_context.TinhTrang == null)
             {
-                return Problem("Entity set 'MvcGymContext.GiaGoi'  is null.");
+                return Problem("Entity set 'MvcGymContext.TinhTrang'  is null.");
             }
-            var giaGoi = await _context.GiaGoi.FindAsync(id);
-            if (giaGoi != null)
+            var tinhTrang = await _context.TinhTrang.FindAsync(id);
+            if (tinhTrang != null)
             {
-                _context.GiaGoi.Remove(giaGoi);
+                _context.TinhTrang.Remove(tinhTrang);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool GiaGoiExists(string id)
+        private bool TinhTrangExists(string id)
         {
-          return (_context.GiaGoi?.Any(e => e.MaGiaGoi == id)).GetValueOrDefault();
+          return (_context.TinhTrang?.Any(e => e.MaTinhTrang == id)).GetValueOrDefault();
         }
     }
 }

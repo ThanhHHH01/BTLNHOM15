@@ -5,7 +5,7 @@
 namespace BTLNHOM15.Migrations
 {
     /// <inheritdoc />
-    public partial class GiaGoi : Migration
+    public partial class ThanhToan : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

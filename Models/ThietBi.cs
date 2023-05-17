@@ -7,13 +7,21 @@ public class ThietBi
 {
     [Key]
      [Required]
+    [Display(Name = "Mã thiết bị")]
     public string? MaTB { get; set; }
     [Required]
+    [Display(Name = "Tên thiết bị")]
     public string? TenTB { get; set; }
     [Required]
-    public int size { get; set; }
+    [Display(Name = "Kích thước")]
+    public string? size { get; set; }
     [Required]
+    [Display(Name = "Số lượng")]
      public int Soluong { get; set; }
+
     [Required]
-    public decimal Giatien { get; set; }
+    [Display(Name = "Tình trạng")]
+    public string? MaTinhTrang { get; set; }
+    [ForeignKey("MaTinhTrang")]
+    public TinhTrang? TinhTrang{get; set;} 
 }

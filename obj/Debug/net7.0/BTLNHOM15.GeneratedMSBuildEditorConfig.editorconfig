@@ -36,26 +36,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2h1Y1Z1XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/NetCore/BTLNHOM15/Views/GiaGoi/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhR29pXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/NetCore/BTLNHOM15/Views/GiaGoi/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhR29pXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/NetCore/BTLNHOM15/Views/GiaGoi/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhR29pXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/NetCore/BTLNHOM15/Views/GiaGoi/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhR29pXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/NetCore/BTLNHOM15/Views/GiaGoi/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lhR29pXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/NetCore/BTLNHOM15/Views/GoiTap/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR29pVGFwXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -132,6 +112,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/NetCore/BTLNHOM15/Views/ThanhToan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/ThanhToan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/ThanhToan/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/ThanhToan/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/ThanhToan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/NetCore/BTLNHOM15/Views/ThietBi/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhpZXRCaVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -150,6 +150,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/NetCore/BTLNHOM15/Views/ThietBi/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhpZXRCaVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/TinhTrang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaFRyYW5nXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/TinhTrang/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaFRyYW5nXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/TinhTrang/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaFRyYW5nXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/TinhTrang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaFRyYW5nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/NetCore/BTLNHOM15/Views/TinhTrang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaFRyYW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/NetCore/BTLNHOM15/Views/_ViewImports.cshtml]

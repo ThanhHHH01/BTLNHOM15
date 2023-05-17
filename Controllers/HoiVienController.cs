@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -21,9 +22,8 @@ namespace BTLNHOM15.Controllers
         // GET: HoiVien
         public async Task<IActionResult> Index()
         {
-              return _context.HoiVien != null ? 
-                          View(await _context.HoiVien.ToListAsync()) :
-                          Problem("Entity set 'MvcGymContext.HoiVien'  is null.");
+            var mvcGymContext = _context.HoiVien.Include(h => h.GoiTap);
+            return View(await mvcGymContext.ToListAsync());
         }
 
         // GET: HoiVien/Details/5
@@ -35,6 +35,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var hoiVien = await _context.HoiVien
+                .Include(h => h.GoiTap)
                 .FirstOrDefaultAsync(m => m.HoiVienID == id);
             if (hoiVien == null)
             {
@@ -47,6 +48,7 @@ namespace BTLNHOM15.Controllers
         // GET: HoiVien/Create
         public IActionResult Create()
         {
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap");
             return View();
         }
 
@@ -55,7 +57,7 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HoiVienID,TenHV,Address,SĐT,EmailHV,GoiTap,Ngaybatdau,Ngayketthuc")] HoiVien hoiVien)
+        public async Task<IActionResult> Create([Bind("HoiVienID,TenHV,Address,SĐT,EmailHV,MaGoiTap,Ngaybatdau,Ngayketthuc")] HoiVien hoiVien)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +65,7 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 
@@ -79,6 +82,7 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 
@@ -87,7 +91,7 @@ namespace BTLNHOM15.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("HoiVienID,TenHV,Address,SĐT,EmailHV,GoiTap,Ngaybatdau,Ngayketthuc")] HoiVien hoiVien)
+        public async Task<IActionResult> Edit(string id, [Bind("HoiVienID,TenHV,Address,SĐT,EmailHV,MaGoiTap,Ngaybatdau,Ngayketthuc")] HoiVien hoiVien)
         {
             if (id != hoiVien.HoiVienID)
             {
@@ -114,6 +118,7 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 
@@ -126,6 +131,7 @@ namespace BTLNHOM15.Controllers
             }
 
             var hoiVien = await _context.HoiVien
+                .Include(h => h.GoiTap)
                 .FirstOrDefaultAsync(m => m.HoiVienID == id);
             if (hoiVien == null)
             {

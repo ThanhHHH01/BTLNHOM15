@@ -1,4 +1,4 @@
-@model IEnumerable<BTLNHOM15.Models.ThietBi>
+@model IEnumerable<BTLNHOM15.Models.ThanhToan>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TenTB)
+                @Html.DisplayNameFor(model => model.HoiVien)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.size)
+                @Html.DisplayNameFor(model => model.GoiTap)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Soluong)
+                @Html.DisplayNameFor(model => model.Ngayban)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TinhTrang)
@@ -31,21 +31,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TenTB)
+                @Html.DisplayFor(modelItem => item.HoiVien.HoiVienID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.size)
+                @Html.DisplayFor(modelItem => item.GoiTap.MaGoiTap)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Soluong)
+                @Html.DisplayFor(modelItem => item.Ngayban)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TinhTrang.MaTinhTrang)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaTB">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaTB">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaTB">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaHD">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaHD">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaHD">Delete</a>
             </td>
         </tr>
 }
