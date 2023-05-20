@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -48,7 +47,7 @@ namespace BTLNHOM15.Controllers
         // GET: HoiVien/Create
         public IActionResult Create()
         {
-            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap");
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "TenGoi");
             return View();
         }
 
@@ -65,7 +64,7 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "TenGoi", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 
@@ -82,7 +81,7 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "TenGoi", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 
@@ -118,7 +117,7 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "MaGoiTap", hoiVien.MaGoiTap);
+            ViewData["MaGoiTap"] = new SelectList(_context.Set<GoiTap>(), "MaGoiTap", "TenGoi", hoiVien.MaGoiTap);
             return View(hoiVien);
         }
 

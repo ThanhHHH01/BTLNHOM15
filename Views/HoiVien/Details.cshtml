@@ -7,7 +7,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>HoiVien</h4>
+    <h4>Hội viên</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -38,7 +38,7 @@
             @Html.DisplayNameFor(model => model.GoiTap)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GoiTap.MaGoiTap)
+            @Html.DisplayFor(model => model.GoiTap.TenGoi)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Ngaybatdau)
@@ -55,6 +55,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.HoiVienID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.HoiVienID">Edit</a> 
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
 </div>

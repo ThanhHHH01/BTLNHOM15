@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BTLNHOM15.Models;
-    
-namespace BTLNHOM15.Data;
 
     public class MvcGymContext : DbContext
     {
@@ -22,9 +20,11 @@ namespace BTLNHOM15.Data;
 
         public DbSet<BTLNHOM15.Models.GoiTap> GoiTap { get; set; } = default!;
 
+        public DbSet<BTLNHOM15.Models.TinhTrang> TinhTrang { get; set; } = default!;
+
         public DbSet<BTLNHOM15.Models.ThietBi> ThietBi { get; set; } = default!;
 
         public DbSet<BTLNHOM15.Models.ThanhToan> ThanhToan { get; set; } = default!;
 
-        public DbSet<BTLNHOM15.Models.TinhTrang> TinhTrang { get; set; } = default!;
+        
     }

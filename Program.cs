@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using BTLNHOM15.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MvcGymContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("MvcGymContext") ?? throw new InvalidOperationException("Connection string 'MvcGymContext' not found.")));

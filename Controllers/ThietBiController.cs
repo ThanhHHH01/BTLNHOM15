@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -48,7 +47,7 @@ namespace BTLNHOM15.Controllers
         // GET: ThietBi/Create
         public IActionResult Create()
         {
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang");
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT");
             return View();
         }
 
@@ -65,7 +64,7 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 
@@ -82,7 +81,7 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 
@@ -118,7 +117,7 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thietBi.MaTinhTrang);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thietBi.MaTinhTrang);
             return View(thietBi);
         }
 

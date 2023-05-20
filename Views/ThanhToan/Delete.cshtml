@@ -6,22 +6,22 @@
 
 <h1>Delete</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bạn có muốn xoá không ?</h3>
 <div>
-    <h4>ThanhToan</h4>
+    <h4>Thanh toán</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.HoiVien)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HoiVien.HoiVienID)
+            @Html.DisplayFor(model => model.HoiVien.TenHV)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.GoiTap)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GoiTap.MaGoiTap)
+            @Html.DisplayFor(model => model.GoiTap.TenGoi)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Ngayban)
@@ -33,13 +33,13 @@
             @Html.DisplayNameFor(model => model.TinhTrang)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TinhTrang.MaTinhTrang)
+            @Html.DisplayFor(model => model.TinhTrang.NoidungTT)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="MaHD" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        <a asp-action="Index" class="btn btn-primary">Back to List</a>
     </form>
 </div>

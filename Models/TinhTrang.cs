@@ -9,13 +9,11 @@ namespace BTLNHOM15.Models
         [Display( Name = "Mã tình trạng")]
         public string? MaTinhTrang{get; set;}
 
-        [Display( Name = "Tên thiết bị")]
-        public string? MaTB{get; set;}
-        [ForeignKey("MaTB")]
-        public ThietBi? ThietBi{get; set;}
+        [Display( Name = "Tên nội dung")]
+        public string? TenND{get; set;}
        
-        [Display( Name = "Tình trạng thiết bị")]
-        public string? TinhTrangND { get; set; }
+        [Display( Name = "Nội dung tình trạng")]
+        public string? NoidungTT { get; set; }
          
     }
 }

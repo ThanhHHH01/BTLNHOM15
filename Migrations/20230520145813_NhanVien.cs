@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BTLNHOM15.Migrations
 {
     /// <inheritdoc />
-    public partial class ChucVu : Migration
+    public partial class NhanVien : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -130,7 +130,7 @@ namespace BTLNHOM15.Migrations
                 {
                     MaTinhTrang = table.Column<string>(type: "TEXT", nullable: false),
                     MaTB = table.Column<string>(type: "TEXT", nullable: true),
-                    TinhTrangND = table.Column<string>(type: "TEXT", nullable: true)
+                    NoidungTT = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

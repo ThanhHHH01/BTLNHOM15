@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BTLNHOM15.Models;
-using BTLNHOM15.Data;
 
 namespace BTLNHOM15.Controllers
 {
@@ -48,7 +47,7 @@ namespace BTLNHOM15.Controllers
         // GET: NhanVien/Create
         public IActionResult Create()
         {
-            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "MaChucVu");
+            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "TenChucVu");
             return View();
         }
 
@@ -65,7 +64,7 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "MaChucVu", nhanVien.MaChucVu);
+            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "TenChucVu", nhanVien.MaChucVu);
             return View(nhanVien);
         }
 
@@ -82,7 +81,7 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "MaChucVu", nhanVien.MaChucVu);
+            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "TenChucVu", nhanVien.MaChucVu);
             return View(nhanVien);
         }
 
@@ -118,7 +117,7 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "MaChucVu", nhanVien.MaChucVu);
+            ViewData["MaChucVu"] = new SelectList(_context.Set<ChucVu>(), "MaChucVu", "TenChucVu", nhanVien.MaChucVu);
             return View(nhanVien);
         }
 

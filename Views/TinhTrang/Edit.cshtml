@@ -6,7 +6,7 @@
 
 <h1>Edit</h1>
 
-<h4>TinhTrang</h4>
+<h4>Tình trạng</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,24 +14,21 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MaTinhTrang" />
             <div class="form-group">
-                <label asp-for="MaTB" class="control-label"></label>
-                <select asp-for="MaTB" class="form-control" asp-items="ViewBag.MaTB"></select>
-                <span asp-validation-for="MaTB" class="text-danger"></span>
+                <label asp-for="TenND" class="control-label"></label>
+                <input asp-for="TenND" class="form-control" />
+                <span asp-validation-for="TenND" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="TinhTrangND" class="control-label"></label>
-                <input asp-for="TinhTrangND" class="form-control" />
-                <span asp-validation-for="TinhTrangND" class="text-danger"></span>
+                <label asp-for="NoidungTT" class="control-label"></label>
+                <input asp-for="NoidungTT" class="form-control" />
+                <span asp-validation-for="NoidungTT" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary">Back to List</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

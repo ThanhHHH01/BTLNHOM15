@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BTLNHOM15.Data;
 using BTLNHOM15.Models;
 
 namespace BTLNHOM15.Controllers
@@ -50,9 +49,9 @@ namespace BTLNHOM15.Controllers
         // GET: ThanhToan/Create
         public IActionResult Create()
         {
-            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "MaGoiTap");
-            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "HoiVienID");
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang");
+            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "TenGoi");
+            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "TenHV");
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT");
             return View();
         }
 
@@ -69,9 +68,9 @@ namespace BTLNHOM15.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "MaGoiTap", thanhToan.MaGoiTap);
-            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "HoiVienID", thanhToan.HoiVienID);
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thanhToan.MaTinhTrang);
+            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "TenGoi", thanhToan.MaGoiTap);
+            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "TenHV", thanhToan.HoiVienID);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thanhToan.MaTinhTrang);
             return View(thanhToan);
         }
 
@@ -88,9 +87,9 @@ namespace BTLNHOM15.Controllers
             {
                 return NotFound();
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "MaGoiTap", thanhToan.MaGoiTap);
-            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "HoiVienID", thanhToan.HoiVienID);
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thanhToan.MaTinhTrang);
+            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "TenGoi", thanhToan.MaGoiTap);
+            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "TenHV", thanhToan.HoiVienID);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thanhToan.MaTinhTrang);
             return View(thanhToan);
         }
 
@@ -126,9 +125,9 @@ namespace BTLNHOM15.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "MaGoiTap", thanhToan.MaGoiTap);
-            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "HoiVienID", thanhToan.HoiVienID);
-            ViewData["MaTinhTrang"] = new SelectList(_context.Set<TinhTrang>(), "MaTinhTrang", "MaTinhTrang", thanhToan.MaTinhTrang);
+            ViewData["MaGoiTap"] = new SelectList(_context.GoiTap, "MaGoiTap", "TenGoi", thanhToan.MaGoiTap);
+            ViewData["HoiVienID"] = new SelectList(_context.HoiVien, "HoiVienID", "TenHV", thanhToan.HoiVienID);
+            ViewData["MaTinhTrang"] = new SelectList(_context.TinhTrang, "MaTinhTrang", "NoidungTT", thanhToan.MaTinhTrang);
             return View(thanhToan);
         }
 
