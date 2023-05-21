@@ -1,8 +1,53 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    ul{
+        list-style: none;
+    }
+    .gymroom {
+    background: url(../images/anh-gym.jpg) no-repeat center;
+    color: #fff;
+    text-align: center;
+    height: 500px;
+    width: 1140px;
+  }
+  .gymroom h2 {
+    font-weight: normal;
+    padding: 50px auto;
+    font-size: 56px;
+    margin-bottom: 50px;
+  }
+  .gymroom .info {
+    margin-bottom: 50px;
+    font-size: 42px;
+    color: yellow;
+  }
+  .gymroom .btn {
+    margin-bottom: 50px;
+    font-size: 42px;
+    text-align: center;
+    color: red;
+  }
+  .gymroom .btn-list li{
+    display: inline;
+  }
+  .gymroom .btn-list li h3{
+    margin-bottom: 50px; 
+    font-size: 36px;
+    color: #000;
+    display: inline-block;
+    margin: 18px;
+    text-align: center;
+  }
+</style>
+<section class="gymroom">
+    <h2>Welcome to Gym Room</h2>
+    <p class="info">Enjoy the Experience</p>
+    <ul class="btn-list">
+      <li><h3>Sweat</h3></li>
+      <li><h3>Tears</h3></li>
+      <li><h3>Blood</h3></li>
+    </ul>  
+    <p class="btn">Reach to Success</p>
+</section>

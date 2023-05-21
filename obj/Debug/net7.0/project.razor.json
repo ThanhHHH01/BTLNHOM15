@@ -18645,6 +18645,11 @@
   "RootNamespace": "BTLNHOM15",
   "Documents": [
     {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThietBi\\Details.cshtml",
+      "TargetPath": "Views\\ThietBi\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -18660,6 +18665,91 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ChucVu\\Create.cshtml",
+      "TargetPath": "Views\\ChucVu\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\NhanVien\\Edit.cshtml",
+      "TargetPath": "Views\\NhanVien\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThanhToan\\Delete.cshtml",
+      "TargetPath": "Views\\ThanhToan\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThietBi\\Delete.cshtml",
+      "TargetPath": "Views\\ThietBi\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\TinhTrang\\Edit.cshtml",
+      "TargetPath": "Views\\TinhTrang\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThanhToan\\Index.cshtml",
+      "TargetPath": "Views\\ThanhToan\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ChucVu\\Index.cshtml",
+      "TargetPath": "Views\\ChucVu\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThanhToan\\Details.cshtml",
+      "TargetPath": "Views\\ThanhToan\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThanhToan\\Edit.cshtml",
+      "TargetPath": "Views\\ThanhToan\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\TinhTrang\\Delete.cshtml",
+      "TargetPath": "Views\\TinhTrang\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\HoiVien\\Details.cshtml",
+      "TargetPath": "Views\\HoiVien\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\GoiTap\\Index.cshtml",
+      "TargetPath": "Views\\GoiTap\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThietBi\\Create.cshtml",
+      "TargetPath": "Views\\ThietBi\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ChucVu\\Details.cshtml",
+      "TargetPath": "Views\\ChucVu\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\NhanVien\\Create.cshtml",
+      "TargetPath": "Views\\NhanVien\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\TinhTrang\\Index.cshtml",
+      "TargetPath": "Views\\TinhTrang\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\HoiVien\\Edit.cshtml",
+      "TargetPath": "Views\\HoiVien\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -18670,13 +18760,98 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ChucVu\\Delete.cshtml",
+      "TargetPath": "Views\\ChucVu\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\GoiTap\\Details.cshtml",
+      "TargetPath": "Views\\GoiTap\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\GoiTap\\Create.cshtml",
+      "TargetPath": "Views\\GoiTap\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThietBi\\Index.cshtml",
+      "TargetPath": "Views\\ThietBi\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\TinhTrang\\Create.cshtml",
+      "TargetPath": "Views\\TinhTrang\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThietBi\\Edit.cshtml",
+      "TargetPath": "Views\\ThietBi\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\GoiTap\\Delete.cshtml",
+      "TargetPath": "Views\\GoiTap\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ThanhToan\\Create.cshtml",
+      "TargetPath": "Views\\ThanhToan\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\HoiVien\\Index.cshtml",
+      "TargetPath": "Views\\HoiVien\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\NhanVien\\Delete.cshtml",
+      "TargetPath": "Views\\NhanVien\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\TinhTrang\\Details.cshtml",
+      "TargetPath": "Views\\TinhTrang\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\ChucVu\\Edit.cshtml",
+      "TargetPath": "Views\\ChucVu\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\NhanVien\\Details.cshtml",
+      "TargetPath": "Views\\NhanVien\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\HoiVien\\Delete.cshtml",
+      "TargetPath": "Views\\HoiVien\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\NhanVien\\Index.cshtml",
+      "TargetPath": "Views\\NhanVien\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\GoiTap\\Edit.cshtml",
+      "TargetPath": "Views\\GoiTap\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\BTLNHOM15\\BTLNHOM15\\Views\\HoiVien\\Create.cshtml",
+      "TargetPath": "Views\\HoiVien\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],
