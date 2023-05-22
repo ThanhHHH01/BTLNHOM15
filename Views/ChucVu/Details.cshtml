@@ -7,7 +7,10 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Chức vụ</h4>
+    <p>
+    <a asp-action="Create" class="btn btn-success">Chức vụ</a>
+</p>
+
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -19,6 +22,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaChucVu">Edit</a> 
-    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.MaChucVu" class="btn btn-primary">Chỉnh sửa</a> 
+    <a asp-action="Index" class="btn btn-primary">Trở về</a>
 </div>

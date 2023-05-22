@@ -7,9 +7,9 @@
 <h1>Quản lý chức vụ</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-success">Thêm mới</a>
 </p>
-<table class="table">
+<table class="w3-table-all">
     <thead>
         <tr>
             <th>
@@ -25,9 +25,9 @@
                 @Html.DisplayFor(modelItem => item.TenChucVu)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.MaChucVu">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaChucVu">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaChucVu">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.MaChucVu" class="btn btn-primary">Edit</a> 
+                <a asp-action="Details" asp-route-id="@item.MaChucVu" class="btn btn-info">Details</a> 
+                <a asp-action="Delete" asp-route-id="@item.MaChucVu" class="btn btn-danger">Delete</a>
             </td>
         </tr>
 }

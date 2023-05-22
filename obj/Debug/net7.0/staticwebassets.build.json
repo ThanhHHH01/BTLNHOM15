@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qfyYAg4r1cpTkD1jvHq4OVYywapuFRZkgLuRHHqXEVc=",
+  "Hash": "ied5suqsrrZf5Yy5yeE9CWPAMNqXkxqUNScTZvi5Nfc=",
   "Source": "BTLNHOM15",
   "BasePath": "_content/BTLNHOM15",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "E:\\NetCore\\BTLNHOM15\\wwwroot\\css\\w3.css",
+      "SourceId": "BTLNHOM15",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\NetCore\\BTLNHOM15\\wwwroot\\",
+      "BasePath": "_content/BTLNHOM15",
+      "RelativePath": "css/w3.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\w3.css"
     },
     {
       "Identity": "E:\\NetCore\\BTLNHOM15\\wwwroot\\favicon.ico",

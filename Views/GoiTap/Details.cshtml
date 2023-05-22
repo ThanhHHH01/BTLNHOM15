@@ -4,10 +4,13 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Thông tin</h1>
 
 <div>
-    <h4>Gói tập</h4>
+    <p>
+    <a asp-action="Create" class="btn btn-success">Gói tập</a>
+</p>
+
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -25,6 +28,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.MaGoiTap">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model?.MaGoiTap" class="btn btn-primary">Chỉnh sửa</a> 
+    <a asp-action="Index" class="btn btn-primary">Trở về</a>
 </div>

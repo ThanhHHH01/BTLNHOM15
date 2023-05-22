@@ -4,32 +4,35 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Thêm mới</h1>
 
-<h4>Tình trạng</h4>
-<hr />
+<p>
+    <a asp-action="Create" class="btn btn-success">Tình Trạng</a>
+</p>
+
+<hr/>
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" class="w3-card">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="MaTinhTrang" class="control-label"></label>
-                <input asp-for="MaTinhTrang" class="form-control" />
+                <input asp-for="MaTinhTrang" class="form-control"/>
                 <span asp-validation-for="MaTinhTrang" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TenND" class="control-label"></label>
-                <input asp-for="TenND" class="form-control" />
+                <input asp-for="TenND" class="form-control"/>
                 <span asp-validation-for="TenND" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="NoidungTT" class="control-label"></label>
-                <input asp-for="NoidungTT" class="form-control" />
+                <input asp-for="NoidungTT" class="form-control"/>
                 <span asp-validation-for="NoidungTT" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-primary">Back to List</a>
+                <input type="submit" value="Create" class="btn btn-primary"/>
+                <a asp-action="Index" class="btn btn-primary">Trở về</a>
             </div>
         </form>
     </div>
