@@ -11,7 +11,10 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.5",
+<<<<<<< HEAD
+=======
           "Microsoft.EntityFrameworkCore.Tools": "7.0.5",
+>>>>>>> 54de35fa0abef6c2330f1a7907782a535ccfea55
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.6"
         },
         "runtime": {
@@ -994,11 +997,14 @@
           }
         }
       },
+<<<<<<< HEAD
+=======
       "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "7.0.5"
         }
       },
+>>>>>>> 54de35fa0abef6c2330f1a7907782a535ccfea55
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
@@ -2724,6 +2730,8 @@
       "path": "microsoft.entityframeworkcore.sqlserver/7.0.5",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512"
     },
+<<<<<<< HEAD
+=======
     "Microsoft.EntityFrameworkCore.Tools/7.0.5": {
       "type": "package",
       "serviceable": true,
@@ -2731,6 +2739,7 @@
       "path": "microsoft.entityframeworkcore.tools/7.0.5",
       "hashPath": "microsoft.entityframeworkcore.tools.7.0.5.nupkg.sha512"
     },
+>>>>>>> 54de35fa0abef6c2330f1a7907782a535ccfea55
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",
       "serviceable": true,
